@@ -1,0 +1,114 @@
+1. 제어문 (Control Statement)
+    - 프로그램 내에서 실행 순서를 변경하거나
+      조건에 따라 실행해야 할 명령문을 제어하기 위한 구문
+    - 일반적으로 프로그램은 위에서 아래로 수행되지만
+      특정 조건에서만 수행하거나 특정 부분을 반복해서 실행 할 경우 필요
+    - 조건문의 종류
+      조건문, 반복문 , 기타 제어문
+      조건문 : if , elif, 삼항조건문
+      반복문 : while, for
+      기타 제어문  : break, for
+
+(1) 조건문 (Control Statement)
+    - 조건에 따라 다른 것을 구현하는 문장
+    - if , if-else, if-elif, if-elif-else
+    1) if
+        if 조건:
+            조건이 True일 때 해야할 일
+            조건이 TRue일 때 해야할 일 2
+        a = -1
+        if a > 0:
+            print("a는 0보다 큼")
+    2) if else
+        if 조건 :
+            출력
+        else:
+            출력
+    3) if elif (cf. else if, elsif, elseif)
+        if 점수 >= 90:
+            학점A
+        elif 점수 >= 80:
+            학점B
+        elif 점수 >= 70:
+            학점C
+        else:
+            학점F
+
+4. 입출력 함수
+	1) print
+		:출력함수오서, end를 통해 종료문자 설정 가능
+
+5. 연산자 (operator)
+	: 산술연산자 , 비교 연산자 , 논리 연산자
+	(1) 산술연산자
+		+: 덧셈 , 문자 + 문자 =  연결
+		- : 뺄셈,
+		*: 곱셈 , 문자 + 숫자 = 문자가 숫자만큼 반복
+		/: 마뭇셈 , 정수 / 정수  => 이 결과가 float 에 주목
+		//: 몫
+		%: 나머지 ,ex) 10%3=> 1
+		** : 파워(제곱) 연산자 , 5**3 = 125
+
+	(2) 관계 연산 (비교 연산 )
+		True 또는 False로 답이 나오는 연산자
+		a  > b
+		a >=  b
+		a < b
+		a == b : a와 b가 같냐?
+		a!= b; a와 b가 다르냐?
+
+	(3) 논리 연산
+		A and B: A가 True이고 B사 True이면 True
+		A or B :A 또는 B가 True이면 True
+ 		not A : A의 반대
+		중첩 가능 : A and B and C or D and E
+
+(2) 반복문 (loop, iteration)
+	- 어떤 작업 을 한 번 이상 반복해서 수행
+	- 동일한 작업을 여러번 반복해서 하고 싶을 떄
+	100번 수행한다고 100줄 코딩하고 싶지 않을 떄
+	- while, for cf) do while(C, Java)
+	1) while
+		- 특정조건을 만족하는 동안 반복해서 수행
+
+		- while 조건:
+			조건이 True 일 때 실행할 문장
+	I =0
+	while I < 10:
+		print(i)
+		I = I +1
+	print(“aaaa”)
+
+	✨ 참고
+	while True :
+		수행할 일
+		if 탈출 조건:
+			break
+	2) for
+		- 범위나 횟수가 정해져있는 동안 반복해서 수행
+		* 형태
+			for 변수 in 집합(떼):
+				반복해서 실행할 문장
+			for i in [1, 2, 3]:
+				print(n)
+		* 집합(떼)
+			문자열(str), 리스트 (list), 튜플 (tuple),
+			레인지(range), 세트 (set), 딕셔너리 (dictionary)
+
+			for chr in ‘문자열 집헙’:
+				print()
+
+		리스트 : [‘1st’, ‘2nd’, ‘3rd’]
+
+`		튜플 : (’spring’, ‘summer’, ‘full’, ‘winter’) # 수정불가
+		세트 : {’spring’, ’summer’}. # 중복없음 , 순서보장 없음
+		딕셔너리 : {‘name’: ’James’, ‘age’: 30}
+
+		range(초기값, 종료값, 증감값)
+		- 초기값부터 시작, 종료값까지 증감값만큼 거리를 두고
+		range(0, 5, 1) => 0, 1, 2, 3, 4
+		- 초기값은 생략하면 0
+		- 종료값은 생략 불가
+		- 증감값은 생략하면 1
+		=> 	range (5) => 0, 1, 2, 3, 4
+			for i in range(5):
